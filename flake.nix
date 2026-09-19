@@ -49,6 +49,7 @@
                 pkg-config
                 # browser-secret helper links against the host's libsecret.
                 libsecret
+                imagemagick
               ]
               ++ lib.optionals stdenv.isDarwin [
                 # clang toolchain for node-gyp on macOS.
