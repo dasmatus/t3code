@@ -25,9 +25,7 @@ flakes enabled:
 nix develop
 ```
 
-Install the `vp` task runner once (it is not in nixpkgs); the shell prints the command
-if it is missing. Then `vp i` and `vp run dev` work as above. Regenerate `flake.lock`
-with `nix flake lock` when bumping the pinned nixpkgs revision.
+Install the `vp` task runner once (it is not in nixpkgs); the shell prints the command if it is missing. After installing it, exit and re-enter `nix develop`, then `vp i` and `vp run dev` work as above. Regenerate `flake.lock` with `nix flake lock` when bumping the pinned nixpkgs revision.
 
 ## Choosing a dev process
 
