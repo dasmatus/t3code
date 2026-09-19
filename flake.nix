@@ -2,8 +2,8 @@
   description = "T3 Code development shell";
 
   inputs = {
-    # Pinned to an exact nixpkgs-unstable commit for reproducibility.
-    # Bump with: nix flake update nixpkgs   (then commit flake.lock)
+    # nixpkgs-unstable branch; the resolved revision is pinned by flake.lock.
+    # Regenerate with: nix flake lock   (or bump with: nix flake update nixpkgs)
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
