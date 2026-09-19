@@ -44,7 +44,7 @@
                 python3
                 gnumake
               ]
-              ++ lib.optionals stdenv.isLinux [
+              ++ lib.optionals stdenv.hostPlatform.isLinux [
                 gcc
                 pkg-config
                 # browser-secret helper links against the host's libsecret.
@@ -52,7 +52,7 @@
                 # dist:desktop:linux resizes the app icon with magick/convert.
                 imagemagick
               ]
-              ++ lib.optionals stdenv.isDarwin [
+              ++ lib.optionals stdenv.hostPlatform.isDarwin [
                 # clang toolchain for node-gyp on macOS.
                 clang
               ];
